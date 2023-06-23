@@ -16,22 +16,30 @@ class MyApp extends StatelessWidget {
         body: SafeArea(
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                width: 30.0,
-                color: Colors.white,
-                child: Text('Container 1'),
-              ),
-              SizedBox(
-                width: 30.0,
-              ),
-              Container(
+                width: 100,
                 color: Colors.blue,
-                child: Text('Container 2'),
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 100.0,
+                    height: 100.0,
+                    color: Colors.yellow,
+                  ),
+                  Container(
+                    width: 100.0,
+                    height: 100.0,
+                    color: Colors.green,
+                  ),
+                ],
               ),
               Container(
+                width: 100,
                 color: Colors.red,
-                child: Text('Container 3'),
               ),
             ],
           ),
