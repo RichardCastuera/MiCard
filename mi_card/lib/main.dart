@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.teal,
@@ -32,11 +32,55 @@ class MyApp extends StatelessWidget {
                 'SOFTWARE ENGINEER',
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 15.0,
+                    fontSize: 20.0,
                     fontFamily: 'SourceCodePro',
                     fontWeight: FontWeight.bold,
-                    letterSpacing: 2.5),
-              )
+                    letterSpacing: 3.0),
+              ),
+              Container(
+                margin: EdgeInsets.fromLTRB(20, 20, 20, 10),
+                padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                color: Colors.white,
+                child: const Row(
+                  children: [
+                    Icon(Icons.add_call, color: Colors.teal),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Text(
+                      '+63 942 3183 681',
+                      style: TextStyle(
+                        fontSize: 15.0,
+                        color: Colors.teal,
+                        fontFamily: 'SourceCodePro',
+                        fontWeight: FontWeight.bold,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.fromLTRB(20, 0, 20, 10),
+                padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                color: Colors.white,
+                child: const Row(
+                  children: [
+                    Icon(Icons.email, color: Colors.teal),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Text(
+                      'richardcastuera16@gmail.com',
+                      style: TextStyle(
+                        fontSize: 15.0,
+                        color: Colors.teal,
+                        fontFamily: 'SourceCodePro',
+                        fontWeight: FontWeight.bold,
+                      ),
+                    )
+                  ],
+                ),
+              ),
             ],
           ),
         ),
