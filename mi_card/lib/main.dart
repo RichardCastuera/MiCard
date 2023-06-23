@@ -9,12 +9,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircleAvatar(
                 radius: 50.0,
@@ -37,48 +38,42 @@ class MyApp extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     letterSpacing: 3.0),
               ),
-              Container(
+              Card(
                 margin: EdgeInsets.fromLTRB(20, 20, 20, 10),
-                padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
                 color: Colors.white,
-                child: const Row(
-                  children: [
-                    Icon(Icons.add_call, color: Colors.teal),
-                    SizedBox(
-                      width: 10.0,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.add_call,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    '+63 942 3183 681',
+                    style: TextStyle(
+                      fontSize: 13.0,
+                      color: Colors.teal,
+                      fontFamily: 'SourceCodePro',
+                      fontWeight: FontWeight.bold,
                     ),
-                    Text(
-                      '+63 942 3183 681',
-                      style: TextStyle(
-                        fontSize: 15.0,
-                        color: Colors.teal,
-                        fontFamily: 'SourceCodePro',
-                        fontWeight: FontWeight.bold,
-                      ),
-                    )
-                  ],
+                  ),
                 ),
               ),
-              Container(
+              Card(
                 margin: EdgeInsets.fromLTRB(20, 0, 20, 10),
-                padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
                 color: Colors.white,
-                child: const Row(
-                  children: [
-                    Icon(Icons.email, color: Colors.teal),
-                    SizedBox(
-                      width: 10.0,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    'richardcastuera16@gmail.com',
+                    style: TextStyle(
+                      fontSize: 13.0,
+                      color: Colors.teal,
+                      fontFamily: 'SourceCodePro',
+                      fontWeight: FontWeight.bold,
                     ),
-                    Text(
-                      'richardcastuera16@gmail.com',
-                      style: TextStyle(
-                        fontSize: 15.0,
-                        color: Colors.teal,
-                        fontFamily: 'SourceCodePro',
-                        fontWeight: FontWeight.bold,
-                      ),
-                    )
-                  ],
+                  ),
                 ),
               ),
             ],
