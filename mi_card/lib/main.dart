@@ -38,8 +38,15 @@ class MyApp extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     letterSpacing: 3.0),
               ),
+              SizedBox(
+                height: 20.0,
+                width: 150.0,
+                child: Divider(
+                  color: Colors.white,
+                ),
+              ),
               Card(
-                margin: EdgeInsets.fromLTRB(20, 20, 20, 10),
+                margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
                 color: Colors.white,
                 child: ListTile(
                   leading: Icon(
